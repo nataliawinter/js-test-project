@@ -1,7 +1,7 @@
-const Hotel = require('../Hotel');
+const HotelController = require('../modules/Hotel/Controllers/HotelController');
 
 test('Calculate all values of the Days', () => {
-    const classHotel = new Hotel('Regular: 16Mar2020(mon), 17Mar2020(tues), 18Mar2020(wed)');
+    const classHotel = new HotelController('Regular: 16Mar2020(mon), 17Mar2020(tues), 18Mar2020(wed)');
 
     const result = [
         {
@@ -25,7 +25,7 @@ test('Calculate all values of the Days', () => {
 });
 
 test('Return the values on constructor', () => {
-    const classHotel = new Hotel('Regular: 16Mar2020(mon), 17Mar2020(tues), 18Mar2020(wed)');
+    const classHotel = new HotelController('Regular: 16Mar2020(mon), 17Mar2020(tues), 18Mar2020(wed)');
 
     expect(classHotel.typeClient).toBe('regular');
 });
