@@ -11,6 +11,7 @@ class Hotel {
     calculate() {
       let options = [];
       const { hotels } = this.listAllHotels();
+
       hotels.map(hotel => {
         let results = [];
         this.dates.map(item => {
@@ -103,13 +104,13 @@ class Hotel {
     }
   }
   
-  const args = process.argv.slice(2);
-  if (args[0] === '' || args[0] == undefined) {
-    console.log('Por favor, digite um valor de entrada, você deve passar o tipo de cliente e as datas.');
-    return;
-  }
+  // const args = process.argv.slice(2);
+  // if (args[0] === '' || args[0] == undefined) {
+  //   console.log('Por favor, digite um valor de entrada, você deve passar o tipo de cliente e as datas.');
+  //   return;
+  // }
   
-  const classHotel = new Hotel(args[0]);
-  console.log(classHotel.getCheapest());
+  // const classHotel = new Hotel(args[0]);
+  // console.log(classHotel.getCheapest());
   
-  
+module.exports = Hotel;
