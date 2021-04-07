@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "A simple project with a single failing test",
   "scripts": {
-    "test": "mocha test/**/*spec.js"
+    "test": "jest test/*.test.js",
+    "test:debug": "node --inspect node_modules/.bin/jest --runInBand"
   },
   "dependencies": {
-    "chai": "^4.1.2",
     "mocha": "^4.0.1"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
   }
 }
